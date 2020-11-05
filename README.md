@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## SetUp
 
-Things you may want to cover:
+Get the code by either cloning this repository using git 
 
-* Ruby version
+```
+git clone https://github.com/francogonzalezorellano/getting_started_with_rails.git
+```
 
-* System dependencies
+Once downloaded, open the terminal in the project directory, and install dependencies with:
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+Then run the migration:
 
-* Database initialization
+```
+rails db:migrate
+```
 
-* How to run the test suite
+Then start the app with:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails s
+```
 
-* Deployment instructions
-
-* ...
+The app should now be up and running at http://localhost:3000 🚀
