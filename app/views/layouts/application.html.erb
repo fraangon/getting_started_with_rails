@@ -8,14 +8,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
-    <!-- Add it after the javascript_pack_tag -->
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>`
-  </head>
 
-  <body>
-    <div class="bg-white">
-      <%= yield %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="bg-gray-200 text-lg text-gray-800 text-center">
+    <div class= "p-20">
+       <%= yield %> 
     </div>
   </body>
+  
 </html>
