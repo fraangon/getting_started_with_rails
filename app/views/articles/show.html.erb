@@ -1,18 +1,39 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
- 
-<h2>Comments</h2>
-<%= render @article.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
- 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class ="max-w-md mx-auto m-3 p-6 bg-white rounded-lg shadow-xl" >
+
+  <p class="text-xl text-gray-900">
+    <%= @article.title %>
+  </p>
+  
+  <p class ="text-base text-gray-600">
+    <%= @article.text %>
+  </p>
+
+</div>
+
+
+  <div class ="max-w-md mx-auto p-6 m-3 bg-white rounded-lg shadow-xl">
+    <h2 class="text-xl text-gray-900" >Comments</h2>
+    <%= render @article.comments %>
+  </div>
+  
+  <div class ="max-w-md mx-auto p-6 m-3 bg-white rounded-lg shadow-xl">
+    <h2 class="text-xl text-gray-900" >Add a comment:</h2>
+    <%= render 'comments/form' %>
+  </div>
+    
+  <div class ="p-6 ">
+    <h4 class="font-ligth inline-block bg-gray-100 m-2
+            px-6 py-2 rounded-3xl 
+            text-indigo-500 text-2xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-indigo-100
+            transform hover:scale-105" > <%= link_to 'Back', articles_path %> </h4>
+    <h4 class="font-ligth inline-block bg-gray-100 m-2
+            px-6 py-2 rounded-3xl 
+            text-green-500 text-2xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-green-100
+            transform hover:scale-105"> <%= link_to 'Edit', edit_article_path(@article) %> </h4>
+  </div>

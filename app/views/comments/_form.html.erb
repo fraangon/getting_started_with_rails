@@ -1,13 +1,17 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
+  <div>
+  <p class = "inline text-base text-2xs text-gray-800">
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
   </p>
-  <p>
+</div>
+<div>
+  <p class = "inline text-base text-2xs text-gray-800">
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <div><%= form.text_area :body %></div>
   </p>
   <p>
     <%= form.submit %>
   </p>
+</div>
 <% end %>

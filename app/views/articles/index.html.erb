@@ -1,21 +1,39 @@
-<h1 >Listing Articles</h1>
+<h1 class="text-4xl font-light text-gray-800 mb-5" >Listing Articles</h1>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
+<div>
  
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <div class ="max-w-md mx-auto p-6 bg-white rounded-lg shadow-xl" >
+      <div class= "mb-3">
+        <p class="text-xl text-gray-900"><%= article.title %></p>
+        <p class ="text-base text-gray-600"><%= article.text %></p>
+      </div>
+      
+      <div>
+        <h4 class="font-ligth inline-block bg-gray-100 m-2
+            px-6 py-2 rounded-3xl 
+            text-indigo-500 text-2xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-indigo-100
+            transform hover:scale-105" ><%= link_to 'Show', article_path(article) %></h4>
+        <h4 class="font-ligth inline-block bg-gray-100 m-2
+            px-6 py-2 rounded-3xl 
+            text-green-500 text-2xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-green-100
+            transform hover:scale-105"><%= link_to 'Edit', edit_article_path(article) %></h4>
+        <h4 class="font-ligth inline-block bg-gray-100 m-2
+            px-6 py-2 rounded-3xl 
+            text-red-500 text-2xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-red-100
+            transform hover:scale-105"><%= link_to 'Destroy', article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></h4>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>

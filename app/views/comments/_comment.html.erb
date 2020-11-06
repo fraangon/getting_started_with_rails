@@ -1,15 +1,21 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
- 
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+
+  <p class= "inline text-base text-2xs text-gray-800">
+    <%= comment.commenter %>
+  </p>
+  
+  <p class= "inline text-base text-2xs text-gray-600">
+    <%= comment.body %>
+  </p>
+
+
+<p class="font-ligth inline-block bg-gray-100 m-2
+            px-4 py-1 rounded-3xl 
+            text-red-500 text-xs shadow 
+            cursor-pointer 
+            transition duration-500 
+            ease-in-out hover:bg-red-100
+            transform hover:scale-105">
+  <%= link_to 'Destroy', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
